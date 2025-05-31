@@ -1,0 +1,20 @@
+my_databricks_project:
+  target: dev
+  outputs:
+    dev:
+      catalog: hive_metastore
+      host: adb-3913153935926214.14.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/66cfbdd627a0c6ac
+      schema: ""
+      threads: 1
+      token: dapi86f33721c02b878a68aa38acec8e0970
+      type: databricks
+    
+    prod:
+      catalog: hive_metastore
+      host: adb-3913153935926214.14.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/66cfbdd627a0c6ac
+      schema: ""
+      threads: 1
+      token: dapi86f33721c02b878a68aa38acec8e0970
+      type: databricks
