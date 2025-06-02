@@ -10,7 +10,7 @@ on:
 
 jobs:
   conditional-job:
-    if: github.ref_name == 'main' && github.events.inputs.targetEnv == 'dev'
+    if: github.ref_name == 'main' && inputs.targetEnv == 'dev'
     runs-on: ubuntu-latest
     steps:
       - name: Confirm run
