@@ -1,0 +1,17 @@
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      targetEnv:
+        description: 'Target environment'
+        required: true
+        default: 'dev'
+
+jobs:
+  conditional-job:
+    if: github.ref_name == 'dev' && inputs.targetEnv == 'dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm run
+        run: echo "Running job on branch 'dev' with input 'dev'"
